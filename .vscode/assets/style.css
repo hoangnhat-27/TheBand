@@ -2,55 +2,84 @@
 
 * {
     box-sizing: border-box;
-    top: 0;
     margin: 0;
     padding: 0;
+}
+
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng(font, square..)
+*/
+
+#main-div {}
+
 #header {
+    width: inherit;
     height: 46.5px;
-    background: #000;
+    background-color: #000;
 }
 
-#nav>li {
+#nav {}
+
+#nav li {
     display: inline-block;
     position: relative;
 }
 
-#nav>li a {
-    line-height: 46.5px;
-    text-decoration: none;
+#nav>li>a {
     color: #fff;
-    padding: 12px 24px;
+    text-transform: uppercase;
 }
 
-#nav>li:hover {
+#nav li a {
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0px 24px;
+}
+
+#nav li:hover>a {
     background-color: #ccc;
+    color: #fff;
+    display: inline-block;
 }
 
 #nav #subnav {
-    /* display: none; */
+    display: none;
     position: absolute;
-    list-style-type: none;
+    top: 100%;
+    background-color: #fff;
+    top: 46.5px;
+    width: inherit;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#subnav>li a:hover {
-    background: #333;
-}
-
-#subnav li>a {
-    text-decoration: none;
-    color: #fff;
-    height: 22px;
-    padding: 8px 16px;
-}
-
-#subnav>li {
+#nav li:hover #subnav {
     display: block;
 }
 
-#slider {
-    background: #333;
-    height: 100px;
+#nav #subnav li {
+    display: block;
 }
+
+#nav #subnav a {
+    color: #000;
+    display: block;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#slider {
+    height: 200px;
+}
+
+#content {}
+
+#footer {}
