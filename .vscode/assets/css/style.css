@@ -10,6 +10,14 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
+.clear {
+    clear: both;
+}
+
 
 /*
 1. Vị trí
@@ -126,7 +134,8 @@ html {
     font-size: 15px;
 }
 
-#content {}
+
+/* Content */
 
 #content .content-section {
     width: 800px;
@@ -177,5 +186,113 @@ html {
     width: 154px;
     border-radius: 4px;
 }
+
+
+/* Tour-section */
+
+.tour-section {
+    background-color: #000;
+}
+
+
+/* Ticket-list */
+
+.ticket-list {
+    margin-top: 40px;
+    background-color: #fff;
+    list-style: none;
+}
+
+.ticket-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-list .sold-out {
+    background-color: #ff4436;
+    color: #fff;
+    margin: 0 0 0 16px;
+    padding: 3px 8px;
+}
+
+.ticket-list .quantity {
+    float: right;
+    margin-top: -3px;
+    padding: 0 8px;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+
+/* Place-item */
+
+.places-list {
+    margin: 32px -8px 0px;
+}
+
+.place-item {
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+    padding-bottom: 48px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-description {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.place-buy-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+
+/* Contact-section */
+
+
+/* Footer */
 
 #footer {}
