@@ -295,4 +295,6 @@ html {
 
 /* Footer */
 
-#footer {}
+#footer {
+    color: #fff;
+}
