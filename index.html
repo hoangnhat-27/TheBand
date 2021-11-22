@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>The Band</title>
 </head>
 
@@ -56,15 +56,15 @@
                     ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                     id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div class="member-list">
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Name</p>
                         <img alt="Name" src="./assets/img/bandmembers/member.jpg" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Name</p>
                         <img alt="Name" src="./assets/img/bandmembers/member.jpg" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center member-item">
                         <p class="member-name">Name</p>
                         <img alt="Name" src="./assets/img/bandmembers/member.jpg" class="member-img">
                     </div>
@@ -82,35 +82,62 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
                     <!-- Places -->
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="row places-list">
+                        <div class="col col-third">
                             <img src="./assets/img/places/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/places/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/places/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
+                        <div class="modal js-modal">
+                            <div class="modal-container js-modal-container">
+                                <div class="modal-close js-modal-close modal-hover"><i class="fas fa-times"></i></div>
+                                <header class="modal-header">
+                                    <i class="fas fa-shopping-bag"></i>Tickets
+                                </header>
+                                <div class="modal-body">
+                                    <label for="ticket-quantity" class="modal-label">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        Tickets, $15 per person
+                                    </label>
+                                    <input type="text" id="ticket-quantity" class="modal-input" placeholder="How many?" />
+                                    <label for="ticket-email" class="modal-label">
+                                        <i class="fas fa-user"></i>
+                                        Send To
+                                    </label>
+                                    <input type="email" id="ticket-email" class="modal-input" placeholder="Enter email" />
+                                    <button id="buy-ticket" class="modal-hover">
+                                        Pay
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <footer class="modal-footer">
+                                    <p class="modal-help">Need <a href="#">help?</a></p>
+                                </footer>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,7 +151,28 @@
             hehe
         </div>
     </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector(".js-modal");
+        const removeModal = document.querySelector(".js-modal-close");
+        const modalContainer = document.querySelector(".js-modal-container");
 
+        function showBuyTicket() {
+            modal.classList.add("open");
+        }
+
+        function removeBuyTicket() {
+            modal.classList.remove("open");
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTicket)
+        }
+        removeModal.addEventListener('click', removeBuyTicket)
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 
 </html>
