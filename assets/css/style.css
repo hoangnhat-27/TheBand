@@ -26,10 +26,33 @@ html {
     margin-right: -8px;
 }
 
+.row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
 .col {
     float: left;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
 }
 
 .col-third {
@@ -40,8 +63,24 @@ html {
     width: calc(100% / 2);
 }
 
+.col-full {
+    width: 100%;
+}
+
 .text-center {
     text-align: center !important;
+}
+
+.full-right {
+    float: right !important;
+}
+
+.mt8 {
+    margin-top: 8px !important;
+}
+
+.mt16 {
+    margin-top: 16px !important;
 }
 
 
@@ -54,8 +93,6 @@ html {
 
 
 /* Main */
-
-#main-div {}
 
 #header {
     position: fixed;
@@ -170,7 +207,7 @@ html {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0px;
+    padding: 64px 0px 112px;
 }
 
 #content .section-heading {
@@ -258,7 +295,6 @@ html {
 
 .places-list {
     margin-top: 32px;
-    margin-bottom: 48px;
 }
 
 .place-img {
@@ -289,23 +325,6 @@ html {
 .place-description {
     margin-top: 15px;
     line-height: 1.4;
-}
-
-.place-buy-btn {
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    box-sizing: border-box;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
 }
 
 
@@ -418,9 +437,61 @@ i.fas.fa-shopping-bag {
 
 /* Contact-section */
 
+.contact-content {
+    padding-top: 48px;
+}
+
+.content-section .contact-address {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-address i[class^="fas fa-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.form-control {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+
+/* Map-section */
+
+.map-section img {
+    width: 100%;
+}
+
 
 /* Footer */
 
 #footer {
-    color: #fff;
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list a {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.copyright a,
+#footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #666;
+}
+
+.copyright a {
+    color: rgba(0, 0, 0, 0.6);
 }

@@ -89,7 +89,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third">
@@ -98,7 +98,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third">
@@ -107,10 +107,9 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
                         <div class="modal js-modal">
                             <div class="modal-container js-modal-container">
                                 <div class="modal-close js-modal-close modal-hover"><i class="fas fa-times"></i></div>
@@ -141,14 +140,51 @@
                     </div>
                 </div>
             </div>
-            <!-- Contact section -->
+            <!--Begin Contact section -->
             <div class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="row contact-content">
+                    <div class="col col-half contact-address">
+                        <p><i class="fas fa-map-marker-alt"></i>Chicago, US</p>
+                        <p><i class="fas fa-phone-alt"></i>Phone: +00 151515</p>
+                        <p><i class="fas fa-envelope"></i></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="Name" class="form-control" placeholder="Name" required />
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" name="Email" class="form-control" placeholder="Email" required />
+                                </div>
+                            </div>
+                            <div class="row mt8">
+                                <div class="col col-full">
+                                    <input type="text" name="Message" class="form-control" placeholder="Message" required />
+                                </div>
+                            </div>
+                            <input type="submit" class="btn mt16 full-right" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--End Contact section -->
+            <div class="map-section">
+                <img src="./assets/img/map/map.jpg" alt="map">
             </div>
         </div>
         <div id="footer">
-            hehe
+            <div class="social-list">
+                <a href=""><i class="fab fa-facebook-square"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-snapchat"></i></a>
+                <a href=""><i class="fab fa-pinterest-p"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
         </div>
     </div>
     <script>
