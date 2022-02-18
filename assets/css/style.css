@@ -105,6 +105,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
@@ -163,7 +164,15 @@ html {
     font-size: 14px;
 }
 
-#header .search-btn {
+#header .mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .search-btn,
+#header .mobile-menu {
     color: #fff;
     font-size: 20px;
     float: right;
@@ -174,6 +183,11 @@ html {
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
+}
+
+#header .mobile-menu:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 #slider {
@@ -206,9 +220,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0px 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
