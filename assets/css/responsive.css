@@ -1,0 +1,109 @@
+/* PC */
+
+@media (min-width: 64em) {}
+
+/*Tablet & mobile */
+@media (max-width: 63.975em) {
+    .btn {
+        padding: 16px 16px;
+    }
+
+    .contact-form .form-control {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .social-list {
+        font-size: 48px;
+    }
+
+    .social-list a {
+        margin: 0 8px;
+    }
+
+    #footer .copyright a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+
+    .contact-submit-btn {
+        font-size: 16px;
+    }
+}
+
+/*Tablet*/
+
+@media (min-width: 46.25em) and (max-width: 63.975em) {
+    #nav #subnav a {
+        color: #fff;
+        padding: 5px 12px;
+    }
+
+    .contact-address {
+        line-height: 2;
+    }
+}
+
+
+/*Mobile*/
+
+@media (max-width: 46.187em) {
+    #nav {
+        display: block;
+    }
+
+    #nav #subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    #nav #subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav li a {
+        padding: 1px 24px;
+    }
+
+    #nav>li {
+        display: block;
+    }
+
+    #nav>li:hover {
+        background-color: #ccc;
+    }
+
+    #nav>li:first-child {
+        display: inline-block;
+    }
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    #header .mobile-menu {
+        display: block;
+    }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    #content .s-mt8 {
+        margin-top: 8px !important;
+    }
+
+    #content .s-full-width,
+    #content .s-col-full {
+        width: 100% !important;
+    }
+
+    #content .contact-form {
+        margin-top: 32px;
+    }
+}
